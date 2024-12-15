@@ -1,0 +1,38 @@
+<form (ngSubmit)="onSubmit()" class="tenant-form">
+  <div class="form-group">
+    <label>Room Number</label>
+    <input type="number" [(ngModel)]="tenant.roomNumber" name="roomNumber" readonly />
+  </div>
+
+  <div class="form-group">
+    <label>Name</label>
+    <input type="text" [(ngModel)]="tenant.name" name="name" required />
+  </div>
+
+  <div class="form-group">
+    <label>Rent</label>
+    <input type="number" [(ngModel)]="tenant.rent" name="rent" required />
+  </div>
+
+  <div class="form-group">
+    <label>Start Date</label>
+    <input type="date" [(ngModel)]="tenant.startDate" name="startDate" required />
+  </div>
+
+  <div class="form-group">
+    <label>Bill</label>
+    <input type="number" [(ngModel)]="tenant.bill" name="bill" required />
+  </div>
+
+  <div class="form-group">
+    <label>Total Unit</label>
+    <input type="number" [(ngModel)]="tenant.totalUnit" name="totalUnit" required />
+  </div>
+
+  <div class="form-group">
+    <label>Total Unit Calculation date</label>
+    <input type="date" [(ngModel)]="tenant.totalUnitTillDate" name="totalUnitTillDate" required />
+  </div>
+
+  <button type="submit" class="submit-button">Save</button>
+</form>

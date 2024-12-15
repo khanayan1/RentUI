@@ -1,0 +1,26 @@
+<table>
+    <tr>
+      <th>Room Number</th>
+      <th>Name</th>
+      <th>Rent</th>
+      <th>Start Date</th>
+      <th>Bill</th>
+      <th>Total Unit</th>
+      <th>Total Unit till Date</th>
+      <th>Actions</th>
+    </tr>
+    <tr *ngFor="let tenant of tenants">
+      <td>{{ tenant.roomNumber }}</td>
+      <td>{{ tenant.name }}</td>
+      <td>{{ tenant.rent }}</td>
+      <td>{{ tenant.startDate }}</td>
+      <td>{{ tenant.bill }}</td>
+      <td>{{ tenant.totalUnit }}</td>
+      <td>{{ tenant.totalUnitTillDate}}</td>
+      <td>
+        <button [routerLink]="['/edit-tenant', tenant.roomNumber]">Edit</button>
+        <button (click)="deleteTenant(tenant.roomNumber)">Delete</button>
+      </td>
+    </tr>
+  </table>
+  
